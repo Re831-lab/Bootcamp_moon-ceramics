@@ -1,0 +1,142 @@
+/* ===== HERO ===== */
+.hero {
+  margin-top: var(--header-height);
+  width: 100%;
+  height: 640px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* ---- Image — full width, sits behind everything ---- */
+.hero-right {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--color-surface);
+}
+.hero-right img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* ---- Brown strip — floats on top of image ---- */
+.hero-left {
+  position: relative;
+  z-index: 2;
+  width: 420px;
+  min-width: 420px;
+  height: 640px;
+  margin-left: 165px;
+  background: var(--color-hero-bg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 42px;
+  opacity: 1;
+}
+
+.hero-left__content {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.hero-icon img {
+  width: 85.43px;
+  height: 81.24px;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+  opacity: 1;
+  
+}
+
+.hero-left__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 273px;
+  gap: 20px;
+}
+
+.hero-small-text {
+  font-family: var(--font-primary);
+  font-size: var(--para-default);
+  line-height: 22px;
+  font-weight: var(--fw-regular);
+  color: rgba(255,255,255,0.85);
+}
+
+.hero-title {
+  font-family: var(--font-display);
+  font-size: 36px;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 40px;
+  letter-spacing: 0.04em;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--color-white);
+}
+
+/* ---- Button: Figma specs ---- */
+.btn-outline--white {
+  width: 220px;
+  height: 40px;
+  padding: 15px 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  background: #FFFFFF;
+  color: #826F66;
+  font-family: var(--font-primary);
+  font-size: 14px;
+  font-weight: 600;
+  font-style: normal;
+  line-height: 20px;
+  letter-spacing: 0;
+  text-align: center;
+  text-transform: uppercase;
+  border: none;
+  white-space: nowrap;
+  opacity: 1;
+  transition: background var(--transition), color var(--transition);
+}
+.btn-outline--white:hover {
+  background: var(--color-dark);
+  color: var(--color-white);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1200px) {
+  .hero-left { margin-left: 40px; }
+}
+
+@media (max-width: 900px) {
+  .hero { height: 500px; }
+  .hero-left {
+    width: 320px;
+    min-width: 320px;
+    height: 500px;
+    margin-left: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero { height: auto; min-height: 420px; }
+  .hero-left {
+    width: calc(100% - 40px);
+    min-width: unset;
+    height: auto;
+    min-height: 420px;
+    margin-left: 20px;
+    padding: 36px 32px;
+    gap: 28px;
+  }
+  .btn-outline--white { width: 100%; }
+}

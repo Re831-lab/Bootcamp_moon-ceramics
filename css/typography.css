@@ -1,0 +1,69 @@
+/* =============================================
+   MOON CERAMICS — Typography Classes
+   ============================================= */
+
+/* ---- Display (Inter) ---- */
+.display-5  { font-family: var(--font-primary); font-size: var(--display-5);  line-height: 1.15; }
+.display-4  { font-family: var(--font-primary); font-size: var(--display-4);  line-height: 1.2;  }
+.display-3  { font-family: var(--font-primary); font-size: var(--display-3);  line-height: 1.2;  }
+.display-2  { font-family: var(--font-primary); font-size: var(--display-2);  line-height: 1.3;  }
+.display-1  { font-family: var(--font-primary); font-size: var(--display-1);  line-height: 1.3;  }
+
+.fw-regular   { font-weight: var(--fw-regular); }
+.fw-semibold  { font-weight: var(--fw-semibold); }
+.fw-extrabold { font-weight: var(--fw-extrabold); }
+
+/* ---- Heading (Garamond) ---- */
+.heading-7 { font-family: var(--font-display); font-size: var(--heading-7); line-height: 1.1; font-weight: 400; }
+.heading-6 { font-family: var(--font-display); font-size: var(--heading-6); line-height: 1.1; font-weight: 400; }
+
+/* ---- Paragraph ---- */
+.para-large   { font-size: var(--para-large);   line-height: 28px; }
+.para-medium  { font-size: var(--para-medium);  line-height: 24px; }
+.para-default { font-size: var(--para-default); line-height: 22px; }
+.para-small   { font-size: var(--para-small);   line-height: 18px; }
+
+/* ---- Shared section label ---- */
+.section-label {
+  font-family: var(--font-body);
+  font-size: var(--para-small);
+  font-weight: var(--fw-semibold);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+  display: block;
+  line-height: 18px;
+}
+
+/* ---- Section title (Garamond) ---- */
+.section-title {
+  font-family: var(--font-display);
+  font-size: var(--heading-7);
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-dark);
+  line-height: 1.1;
+}
+.section-title-center { text-align: center; }
+
+/* ---- Shared body text ---- */
+.section-body {
+  font-size: var(--para-default);
+  line-height: 22px;
+  color: var(--color-mid);
+  font-weight: var(--fw-regular);
+}
+
+/* ---- Shared button text ---- */
+.btn-text {
+  font-size: var(--para-small);
+  font-weight: var(--fw-semibold);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-dark);
+  border-bottom: 1px solid var(--color-dark);
+  padding-bottom: 1px;
+  transition: opacity var(--transition);
+}
+.btn-text:hover { opacity: 0.6; }

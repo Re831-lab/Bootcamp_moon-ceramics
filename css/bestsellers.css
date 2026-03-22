@@ -1,0 +1,166 @@
+/* ===== BEST SELLERS ===== */
+.products-section {
+  max-width: 1440px;
+  width: 100%;
+  min-height: 1344px;
+  margin: 0 auto;
+  padding: 80px 165px;
+  opacity: 1;
+}
+
+/* ---- Header ---- */
+.products-section__header {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 48px;
+}
+
+.section-title {
+  font-family: var(--font-display);
+  font-size: 30px;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 36px;
+  letter-spacing: 0;
+  text-align: center;
+  vertical-align: bottom;
+  text-transform: uppercase;
+  color: var(--color-dark);
+  width: 391px;
+  height: 36px;
+  opacity: 1;
+}
+.section-title-center { text-align: center; }
+
+/* ---- Grid rows ---- */
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  width: 100%;
+}
+
+/* ---- Product Card ---- */
+.product-card {
+  width: 100%;
+  height: 530px;
+  justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  opacity: 1;
+  cursor: pointer;
+}
+
+/* ---- Top content (image + info) ---- */
+.product-card__top {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+/* ---- Image wrap ---- */
+.product-card__img-wrap {
+  width: 100%;
+  height: 321px;
+  overflow: hidden;
+  background: var(--color-neutral-300);
+  flex-shrink: 0;
+}
+.product-card__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transition: transform 0.4s ease;
+}
+.product-card:hover .product-card__img { transform: scale(1.04); }
+
+/* ---- Info block ---- */
+.product-card__info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding-top: 12px;
+  flex-shrink: 0;
+}
+
+/* ---- Name: Inter SemiBold 14px, #3A3845 ---- */
+.product-card__name {
+  font-family: var(--font-primary);
+  font-size: 14px;
+  font-weight: 600;
+  font-style: normal;
+  line-height: 20px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #3A3845;
+}
+
+/* ---- Desc: Inter Regular 14px, #807F86 ---- */
+.product-card__desc {
+  font-family: var(--font-primary);
+  font-size: 14px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 22px;
+  letter-spacing: 0;
+  color: #807F86;
+}
+
+/* ---- Price: Inter SemiBold 14px, #3A3845 ---- */
+.product-card__price {
+  font-family: var(--font-primary);
+  font-size: 14px;
+  font-weight: 600;
+  font-style: normal;
+  line-height: 20px;
+  letter-spacing: 0;
+  color: #3A3845;
+}
+
+/* ---- Add to Cart button ---- */
+.product-card__add {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 39px;
+  padding: 15px 18px;
+  gap: 3px;
+  margin-top: auto;
+  border: 1px solid #3A3845;
+  background: transparent;
+  font-family: var(--font-primary);
+  font-size: 12px;
+  font-weight: 600;
+  font-style: normal;
+  line-height: 18px;
+  letter-spacing: 0.08em;
+  text-align: center;
+  text-transform: uppercase;
+  color: #3A3845;
+  opacity: 1;
+  transition: background var(--transition), color var(--transition);
+}
+.product-card__add:hover {
+  background: #3A3845;
+  color: var(--color-white);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1200px) {
+  .products-section { padding: 60px 40px; min-height: auto; }
+  .products-grid { grid-template-columns: repeat(3, 1fr); width: 100%; }
+  .product-card { width: 100%; height: auto; }
+  .product-card__img-wrap { width: 100%; }
+  .product-card__img { width: 110%; top: -20px; left: -5%; }
+  .product-card__add { width: 100%; }
+}
+@media (max-width: 768px) {
+  .products-section { padding: 48px 20px; }
+  .products-grid { grid-template-columns: repeat(2, 1fr); gap: 20px 12px; }
+  .product-card__img-wrap { height: 300px; }
+  .product-card__add { display: none; }
+}

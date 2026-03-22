@@ -1,0 +1,79 @@
+/* =============================================
+   MOON CERAMICS — Design Tokens
+   ============================================= */
+
+:root {
+  /* ---- Primary Palette ---- */
+  --color-warm-black:   #2C2C2C;
+  --color-beige-peach:  #F5EDE0;
+  --color-light-brown:  #8B7B6B;
+  --color-hero-bg:      #826F66;
+
+  /* ---- Neutral Colors ---- */
+  --color-neutral-800:  #19213D;
+  --color-neutral-700:  #353E5C;
+  --color-neutral-600:  #6D758F;
+  --color-neutral-500:  #A1A7BB;
+  --color-neutral-400:  #D7DBE7;
+  --color-neutral-300:  #EDEFF5;
+  --color-neutral-200:  #F8FAFF;
+  --color-white:        #FFFFFF;
+
+  /* ---- Semantic ---- */
+  --color-bg:      var(--color-white);
+  --color-surface: var(--color-neutral-200);
+  --color-dark:    var(--color-warm-black);
+  --color-mid:     var(--color-neutral-600);
+  --color-muted:   var(--color-neutral-500);
+  --color-border:  var(--color-neutral-400);
+
+  /* ---- Typography ---- */
+  --font-primary:    'Inter', sans-serif;
+  --font-secondary:  'Inter', sans-serif;
+  --font-display:    'Cormorant Garamond', Georgia, serif;
+  --font-body:       'Inter', sans-serif;
+
+  /* ---- Font Weights ---- */
+  --fw-regular:    400;
+  --fw-semibold:   600;
+  --fw-extrabold:  800;
+
+  /* ---- Display Scale (Inter) ---- */
+  --display-12: 96px;
+  --display-11: 72px;
+  --display-10: 60px;
+  --display-9:  48px;
+  --display-8:  40px;
+  --display-7:  36px;
+  --display-6:  32px;
+  --display-5:  28px;
+  --display-4:  24px;
+  --display-3:  22px;
+  --display-2:  20px;
+  --display-1:  18px;
+
+  /* ---- Heading Scale (Garamond) ---- */
+  --heading-7:  36px;
+  --heading-6:  32px;
+
+  /* ---- Paragraph Scale ---- */
+  --para-large:   18px;  /* lh: 28px */
+  --para-medium:  16px;  /* lh: 24px */
+  --para-default: 14px;  /* lh: 22px */
+  --para-small:   12px;  /* lh: 18px */
+
+  /* ---- Layout ---- */
+  --max-width:      1440px;
+  --header-height:  82px;
+  --pad:            40px;
+
+  /* ---- Misc ---- */
+  --transition: 0.25s ease;
+}
+
+@media (max-width: 768px) {
+  :root {
+    --pad: 20px;
+    --header-height: 56px;
+  }
+}
